@@ -15,6 +15,7 @@ Add this to your `Cargo.toml`:
 ```toml
 [dependencies]
 waifu_pics_api = { path = "path/to/locally/installed/lib" }
+tokio = { version = "1", features = ["full"] }
 ```
 
 ```rs
