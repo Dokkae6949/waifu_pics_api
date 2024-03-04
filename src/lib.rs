@@ -13,7 +13,7 @@ pub enum Error {
     ParseError(#[from] serde_json::Error),
 }
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub enum SfwCategory {
     Waifu,
     Neko,
@@ -48,7 +48,7 @@ pub enum SfwCategory {
     Cringe,
 }
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub enum NsfwCategory {
     Waifu,
     Neko,
@@ -56,7 +56,7 @@ pub enum NsfwCategory {
     Blowjob,
 }
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Deserialize, Serialize)]
 pub enum Type {
     Sfw(SfwCategory),
     Nsfw(NsfwCategory),
